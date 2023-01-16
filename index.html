@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,21 +9,48 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-    <header>
-        <nav>
+    <header class="nav-container">
+        <nav class="nav-main">
             <h1>ProjetoViaCEP</h1>
-            <div>contato</div>
+            <div class="contact-link">contato</div>
         </nav>
     </header>
     <main>
-        <section id="form-section">
-            
+        <section class="form-container" id="form-section">
+            <div class="card-form">
+                <form action="newAddress">
+                    <div class="form-control">
+                        <label for="cep">CEP:</label>
+                        <input name="cep" id="cep" class="form-input" type="text" placeholder="CEP">
+                        <div class="error-message">Campo requerido</div>
+                    </div>
+                    <div class="form-control">
+                        <label for="street">Logradouro:</label>
+                        <input name="street" id="street" type="text" class="form-input" placeholder="Logradouro" disabled>
+                    </div>
+                    <div class="form-control">
+                        <label for="number">Número:</label>
+                        <input name="number" id="number" type="text" class="form-input" placeholder="Número">
+                        <div class="error-message">Campo requerido</div>
+                    </div>
+                    <div class="form-control">
+                        <label for="city">Cidade:</label>
+                        <input name="city" id="city" type="text" class="form-input" placeholder="Cidade" disabled>
+                    </div>
+                    <div class="btn-container">
+                        <button class="btn btn-left" type="submit">Salvar</button>
+                        <button class="btn btn-right">Limpar</button>
+                    </div>
+                </form>
+            </div>
         </section>
         <section id="list-section">
             <div>
@@ -39,4 +67,5 @@
     </main>
 
 </body>
+
 </html>
